@@ -1,0 +1,163 @@
+body {
+    background-color: #030f1e;
+    color: antiquewhite;
+}
+/* .wrap {
+  max-width:1280px;
+  min-width:90%;
+  height:auto;
+  margin:5%;
+} */
+.flexNav {
+    display: flex;
+    text-align: center;
+    justify-content: space-evenly;
+}
+a:visited {
+    color: rgb(5, 28, 98);
+}
+.btnNav {
+    display: inline-block;
+    background-color: cadetblue;
+    padding: 0.7em 1.7em;
+    /* border: solid 1% black; */
+    margin: 0 0.3em 0.3em 0;
+    border-radius: 0.2em;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-weight: bolder;
+    text-align: center;
+    box-shadow:
+        inset 0 -0.6em 1em -0.35em rgba(0,0,0,0.17),
+        inset 0 0.6em 2em -0.3em rgba(255,255,255,0.15),
+        inset 0 0 0em 0.05em rgba(255,255,255,0.12);
+    
+}
+.btnNav:hover {
+    background-color: rgb(39, 114, 118);
+}
+.btnNav:active {
+    box-shadow: 
+        inset 0 0.6em 2em -0.3em rgba(0,0,0,0.15),
+        inset 0 0 0em 0.05em rgba(255,255,255,0.12);
+    color: blue;
+}
+h1, h2 {
+    text-align: center;
+}
+
+.fa-home {
+    font-size: 24px;
+}
+
+.list1 {
+    list-style-type: none;
+}
+.list2 {
+    list-style-type: circle;
+}
+.encadre {
+    border: double cadetblue;
+    background-color: black;
+    border-radius: 2%;
+    border-width: 10px;
+    padding: 5%;
+    margin: 10%;
+}
+.image1 {
+    text-align: center;
+}
+
+.margD5 {
+    margin-right: 5px;
+}
+.margD10 {
+    margin-right: 10px;
+}
+.margH10 {
+    margin-top: 10px;
+}
+.formula1 {
+    border: solid 1px silver;
+    margin: 5%;
+    padding: 0 5% 5% 5%;
+    background-color: black;
+}
+
+
+/* ----------------------------------- */
+/* -----------page formulaires ----------- */
+
+
+.flexForm {
+    display: flex;
+    text-align: center;
+    justify-content: space-evenly;
+}
+input {
+    width: 75%;
+    border: none;
+    border-bottom: 1px solid silver;
+    background-color: black;
+    color: antiquewhite;
+    margin-bottom: 10px;
+}
+
+
+.btn {
+    padding: 1%;
+}
+
+/* ----------------------------------- */
+/* -----------page du jeu ----------- */
+
+.cartesBox {
+    display: grid;
+    grid-auto-flow: row;
+    width: 85%;
+    height: auto;
+    margin: 5% auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-areas: 
+        "carte1 carte2 carte3 carte4"
+        "carte5 carte6 carte7 carte8 "
+        "carte9 carte10 carte11 carte12"
+        "carte13 carte14 carte15 carte16"
+        "carte17 carte18 carte19 carte20"    
+    ;
+    align-items: center;
+    /* justify-items: stretch; */
+    gap: 1%;
+    /* border: solid 1px green; */
+    
+}
+.cartesBack {
+    /* position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; */
+    /* background-color: darkviolet; */
+    /* transition: all 150ms ease-out; */
+    /* border: solid 1px purple; */
+    
+}
+
+
+
+/* ----------------------------------- */
+/* -----------page du profil ----------- */
+
+table, th, td {
+    border: solid 2px silver;
+    align-content: center;
+}
+.table1 {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.testBord {
+    border: solid 1px green;
+}

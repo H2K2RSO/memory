@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/memory.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Formulaire Jeu Memory</title>
+</head>
+<body>
+    <header>
+        <h1>ENI - Memory - S'inscrire</h1>
+        <section>
+            <nav>
+                <ul class="flexNav list1">
+                    <li><a href="index.html" class="fa btnNav">&#xf015; Accueil</a> </li>
+                    <li><a href="jeu.html" class="fa btnNav">&#xf11b; Jouer</a> </li>
+                    <li><a href="profil.html" class="fa btnNav">&#xf007; Profil</a> </li>
+                    <li><a href="formulaire.html" class="fa btnNav">&#xf011; S'inscrire / Se connecter</a> </li>                    
+                </ul>
+            </nav>
+        </section>
+    </header>
+    <div class="flexForm wrap">
+    <section class="formula1">
+        <form action="" method="POST">
+            <h2>Inscrivez-vous :</h2>
+            <label for="name">Nom d'utilisateur</label><br>
+            <input type="text" pattern="[a-zA-Z0-9]{3,}" placeholder="3 caractères minimum" required><br>
+            <label for="email">Entrez votre email</label><br>
+            <input type="email" placeholder="Votre email" required><br>
+            <label for="mdp">Mot de passe</label><br>
+            <input type="password" placeholder="Votre mot de passe" required><br>
+            <label for="mdp2">Confirmation du mot de passe</label><br>
+            <input type="password" placeholder="Confirmez le mote de passe"><br>
+            <div class="margH10">
+                <button type="submit" class="btn">Création du compte</button>
+                <button type="reset" class="btn">Annuler</button>                
+            </div>
+        </form>
+    </section>
+    <section>
+        <form action="" class="formula1" method="POST">
+            <h2>Connectez-vous :</h2>
+            <label for="email">Entrez votre email</label><br>
+            <input type="email" placeholder="Votre email"><br>
+            <label for="mdp">Mot de passe</label><br>
+            <input type="password" placeholder="Votre mot de passe"><br>
+            <div class="margH10">
+                <button type="submit" class="btn">Se connecter</button>
+                <button type="reset" class="btn">Annuler</button>                
+            </div>
+
+        </form>
+    </section>
+
+    </div>
+    
+    <script type="module" src="javascript/memo.js"></script>
+</body>
+</html>
