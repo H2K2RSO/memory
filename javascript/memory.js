@@ -1,12 +1,13 @@
-
-
 const cartes = document.querySelectorAll(".cartes");
 
 let aTourneCarte = false;
 let bloquePLateau = false;
 let carte1, carte2;
 let tours = 0;
+let pairs = 0;
 const counter = document.querySelector(".counter");
+const modale1 = document.getElementById("modale1");
+const spanModale = document.getElementsByClassName("fermerModale")[0];
 
 function tourneCarte() {
   if (bloquePLateau) return;
@@ -27,10 +28,18 @@ function tourneCarte() {
 }
 
 function verifPair() {
-    tours++;
-    counter.innerHTML = tours;
-    let isPair = carte1.dataset.framework === carte2.dataset.framework;
-    isPair ? disableCartes() : cartesPasTournees();
+  tours++;
+  counter.innerHTML = tours;
+  let isPair = carte1.dataset.framework === carte2.dataset.framework;
+
+  if (isPair) {
+    disableCartes();
+    pairs++;
+  } else {
+    cartesPasTournees();
+  }
+  console.log(pairs);
+  victoire();
 }
 
 function disableCartes() {
@@ -63,33 +72,21 @@ function resetPlateau() {
 
 cartes.forEach((cartes) => cartes.addEventListener("click", tourneCarte));
 
+function victoire() {
+  if (pairs === 10) {
+    modale1.style.display = "block";
+  }
+}
 
-// function startJeu() {
-//     // document.getElementById(cartesBack).style.display = inline-block;
-//     tours = 0;
-//     counter.innerHTML = "0";
-//     resetPlateau();
-//     melangeCartes();
-// };
+spanModale.onclick = function () {
+  modale1.style.display = "none";
+}
 
-// document.onkeydown("keydown", (event) => {
-//   if (key === 32) {
-//     // Event.preventDefault();
-//     tours = 0;
-//     counter.innerHTML = "0";
-//     resetPlateau();
-//     melangeCartes();
-//   }
-// });
-
-// let key = Event.key;
-// if (key == 32) {
-//     Event.preventDefault();
-//     tours = 0;
-//     counter.innerHTML = "0";
-//     resetPlateau();
-//     melangeCartes();
-// };
+window.onclick = function (event) {
+  if (event.target == modale) {
+    modale1.style.display = "none";
+  }
+}
 
 document.addEventListener("keydown", function (event) {
   if (event.code === "Space") {

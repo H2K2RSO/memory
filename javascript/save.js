@@ -1,3 +1,0 @@
-export {
-	nom2Fonction
-}

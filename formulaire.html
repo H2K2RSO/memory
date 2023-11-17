@@ -23,16 +23,16 @@
     </header>
     <div class="flexForm wrap">
     <section class="formula1">
-        <form action="" method="POST">
+        <form id="formA">
             <h2>Inscrivez-vous :</h2>
-            <label for="name">Nom d'utilisateur</label><br>
-            <input type="text" pattern="[a-zA-Z0-9]{3,}" placeholder="3 caractères minimum" required><br>
+            <label for="nom">Nom d'utilisateur</label><br>
+            <input type="text" name="nom" id="nom" placeholder="3 caractères minimum" required><br>
             <label for="email">Entrez votre email</label><br>
-            <input type="email" placeholder="Votre email" required><br>
+            <input type="email" name="email" id="email" placeholder="Votre email" required><br>
             <label for="mdp">Mot de passe</label><br>
-            <input type="password" placeholder="Votre mot de passe" required><br>
-            <label for="mdp2">Confirmation du mot de passe</label><br>
-            <input type="password" placeholder="Confirmez le mote de passe"><br>
+            <input type="password" name="mdp" id="mdp" placeholder="Votre mot de passe" required><br>
+            <label for="mdpVerif">Confirmation du mot de passe</label><br>
+            <input type="password" name="mdpVerif" id="mdpVerif" placeholder="Confirmez le mote de passe"><br>
             <div class="margH10">
                 <button type="submit" class="btn">Création du compte</button>
                 <button type="reset" class="btn">Annuler</button>                
@@ -40,7 +40,7 @@
         </form>
     </section>
     <section>
-        <form action="" class="formula1" method="POST">
+        <form class="formula1" id="formB">
             <h2>Connectez-vous :</h2>
             <label for="email">Entrez votre email</label><br>
             <input type="email" placeholder="Votre email"><br>
@@ -56,6 +56,8 @@
 
     </div>
     
-    <script type="module" src="javascript/memo.js"></script>
+    <script src="javascript/app.js"></script>
+    <script src="javascript/memory.js"></script>
+    <script src="javascript/forms.js"></script>
 </body>
 </html>
